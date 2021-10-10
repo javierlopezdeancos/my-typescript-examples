@@ -2,7 +2,7 @@
 
 Typescript examples resolving LeetCode or HackerRank exercises
 
-# Install your environment
+## Install your environment
 
 Install dependencies to run all commands:
 
@@ -10,7 +10,7 @@ Install dependencies to run all commands:
 npm i
 ```
 
-# Check exercises
+## Check exercises
 
 In order to check the source code of the exercises, you can use the following command:
 
@@ -18,7 +18,7 @@ In order to check the source code of the exercises, you can use the following co
 npm tests
 ```
 
-# Add new exercises
+## Add new exercises
 
 You could add a new exercise with him test only follow the same pattern:
 
