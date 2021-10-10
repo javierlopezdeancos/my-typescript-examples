@@ -1,3 +1,4 @@
+![meme](./assets/meme.jpg)
 # My typescript examples
 
 Typescript examples resolving LeetCode or HackerRank exercises
