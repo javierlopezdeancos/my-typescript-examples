@@ -22,7 +22,8 @@ Typescript examples resolving LeetCode or HackerRank exercises
           * [Simple array sum](./src/hackerrank/algorithms/easy/simpleArraySum.md)
           * [Solve me first](./src/hackerrank/algorithms/easy/solveMefirst.md)
           * [Staircase](./src/hackerrank/algorithms/easy/staircase.md)
-
+* Real code interviews
+  * [Count dupes](https://realCodeInterviews/countDupes.md)
 ## Install your environment
 
 Install dependencies to run all commands:
