@@ -1,6 +1,12 @@
 // URL: https://www.hackerrank.com/challenges/plus-minus
 
-function plusMinus(values: number[]): void {
+type Coefficient = {
+  positive: string;
+  negative: string;
+  zero: string;
+};
+
+export function plusMinus(values: number[]): Coefficient {
   let positives = 0;
   let negatives = 0;
   let zeros = 0;
@@ -15,20 +21,13 @@ function plusMinus(values: number[]): void {
     }
   }
 
-  const positiveCoeficient = positives / values.length;
-  const negativeCoeficient = negatives / values.length;
-  const zeroCoeficient = zeros / values.length;
+  const positiveCoefficient = positives / values.length;
+  const negativeCoefficient = negatives / values.length;
+  const zeroCoefficient = zeros / values.length;
 
-  console.log(positiveCoeficient.toFixed(6));
-  console.log(negativeCoeficient.toFixed(6));
-  console.log(zeroCoeficient.toFixed(6));
+  return {
+    positive: positiveCoefficient.toFixed(6),
+    negative: negativeCoefficient.toFixed(6),
+    zero: zeroCoefficient.toFixed(6),
+  };
 }
-
-console.log(`
-/**************************************/
-/*              plusMInus             */
-/**************************************/
-`);
-
-plusMinus([1, 2, 0, 0, -1, -10]);
-plusMinus([-4, 3, -9, 0, 4, 1]);
