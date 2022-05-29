@@ -1,0 +1,33 @@
+// a = [3, 2 ,1, 2, 3]
+
+export function minimumDistances(numbers: number[]): number {
+  const l = numbers.length;
+  let min = Number.MAX_SAFE_INTEGER;
+
+
+  if (l <= 1) {
+    console.log('SUPER SMALL');
+    return -1;
+  }
+
+  const pairs = new Set<number>();
+
+  for (let i = 0; i < l; i++) {
+    const n = numbers[i];
+
+    const repeated = numbers.filter((x: number) => x === n).length;
+
+    if (repeated !== 2 || pairs.has(n)) {
+      continue;
+    }
+
+    const j = numbers.indexOf(n);
+    const k = numbers.lastIndexOf(n);
+    const distance = Math.abs(j - k);
+
+    min = Math.min(min, distance);
+    pairs.add(n);
+  }
+
+  return min === Number.MAX_SAFE_INTEGER ? -1 : min;
+}
