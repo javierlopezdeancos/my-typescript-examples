@@ -1,6 +1,6 @@
 // URL: https://www.hackerrank.com/challenges/compare-the-triplets
 
-function compareTriplets(alice: number[], bob: number[]): number[] {
+export function compareTriplets(alice: number[], bob: number[]): number[] {
   let aliceScore = 0;
   let bobScore = 0;
 
@@ -21,12 +21,3 @@ function compareTriplets(alice: number[], bob: number[]): number[] {
 
   return [aliceScore, bobScore];
 }
-
-console.log(`
-/**************************************/
-/*         compareTheTriplets         */
-/**************************************/
-`);
-
-console.log(compareTriplets([5, 6, 7], [3, 6, 10]));
-console.log(compareTriplets([17, 28, 30], [99, 16, 8]));

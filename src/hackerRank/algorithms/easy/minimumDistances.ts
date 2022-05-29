@@ -4,9 +4,7 @@ export function minimumDistances(numbers: number[]): number {
   const l = numbers.length;
   let min = Number.MAX_SAFE_INTEGER;
 
-
   if (l <= 1) {
-    console.log('SUPER SMALL');
     return -1;
   }
 
