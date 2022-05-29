@@ -42,7 +42,8 @@ The second line contains  space-separated integers, where each integer  describe
 
 ```
 2
-Explanation 0
 ```
+
+**Explanation 0**
 
 Candle heights are [3,2,1,3]. The tallest candles are 3  units, and there are 2  of them.
