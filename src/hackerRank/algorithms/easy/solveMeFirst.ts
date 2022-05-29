@@ -1,4 +1,4 @@
-// URL: https://www.hackerrank.com/challenges/solve-me-first/problem
+ // URL: https://www.hackerrank.com/challenges/solve-me-first/problem
 
 
 function solveMeFirst(a = 0, b = 0): number | null {

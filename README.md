@@ -6,8 +6,8 @@ Typescript examples resolving LeetCode or HackerRank exercises
 * [LeetCode](https://leetcode.com)
     * Algorithms
         * Easy
-          * [Add array form of integer](https://leetcode.com/problems/add-to-array-form-of-integer/)
-          * [Add binary](https://leetcode.com/problems/add-binary/)
+          * [Add array form of integer](./src/leetCode/algorithms/easy/addToArrayFormOfIntegers.md)
+          * [Add binary](./src/leetCode/algorithms/easy/addBinary.md)
           * [Integer to roman](https://leetcode.com/problems/integer-to-roman/)
           * [Plus one](https://leetcode.com/problems/plus-one/)
         * Medium

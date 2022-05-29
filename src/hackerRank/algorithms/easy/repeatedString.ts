@@ -1,9 +1,13 @@
+// https://www.hackerrank.com/challenges/repeated-string/problem
+
 export function repeatedString(chars: string, numberOfCharsToCount: number): number {
   const l = chars.length;
   const needRepeat = numberOfCharsToCount > chars.length;
 
   if (!needRepeat) {
-    return chars.split('').filter((char: string, index: number) => (char === 'a') && (index < numberOfCharsToCount)).length;
+    return chars
+      .split('')
+      .filter((char: string, index: number) => (char === 'a') && (index < numberOfCharsToCount)).length;
   }
 
   const areDifferentCharsThanA = chars.split('').filter(c => c !== 'a').length;
