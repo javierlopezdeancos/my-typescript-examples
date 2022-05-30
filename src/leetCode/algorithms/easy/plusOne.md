@@ -35,3 +35,8 @@ Output: [1]
 
  *  1 <= digits.length <= 100
  *  0 <= digits[i] <= 9
+
+**Solution**
+
+[Source Code](./plusOne.ts)
+[Tests Code](./plusOne.test.ts)
