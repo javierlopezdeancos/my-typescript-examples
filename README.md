@@ -16,16 +16,16 @@ Typescript examples resolving LeetCode or HackerRank exercises
 * [HackerRank](https://www.hackerrank.com)
     * Algorithms
         * Easy
-          * [Compare de triplets](./src/hackerrank/algorithms/easy/compareTheTriplets.md)
+          * [Compare de triplets](./src/hackerRank/algorithms/easy/compareTheTriplets.md)
           * [Diagonal difference](./src/hackerRank/algorithms/easy/diagonalDifference.md)
           * [Plus minus](./src/hackerRank/algorithms/easy/plusMinus.md)
           * [Repeated String](./src/hackerRank/algorithms/easy/repeatedString.md)
           * [Simple array sum](./src/hackerRank/algorithms/easy/simpleArraySum.md)
-          * [Solve me first](./src/hackerRank/algorithms/easy/solveMefirst.md)
+          * [Solve me first](./src/hackerRank/algorithms/easy/solveMeFirst.md)
           * [Staircase](./src/hackerRank/algorithms/easy/staircase.md)
           * [Birthday Cake Candles](./src/hackerRank/algorithms/easy/birthdayCakeCandles.md)
 * Real code interviews
-  * [Count dupes](https://realCodeInterviews/countDupes.md)
+  * [Count dupes](./src/realCodeInterviews/countDupes.md)
 ## Install your environment
 
 Install dependencies to run all commands:
