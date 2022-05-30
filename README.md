@@ -9,7 +9,7 @@ Typescript examples resolving LeetCode or HackerRank exercises
           * [Add array form of integer](./src/leetCode/algorithms/easy/addToArrayFormOfIntegers.md)
           * [Add binary](./src/leetCode/algorithms/easy/addBinary.md)
           * [Integer to roman](https://leetcode.com/problems/integer-to-roman/)
-          * [Plus one](https://leetcode.com/problems/plus-one/)
+          * [Plus one](./src/leetCode/algorithms/easy/plusOne.md)
         * Medium
           * [Add two numbers](https://leetcode.com/problems/add-two-numbers/)
           * [Multiply strings](https://leetcode.com/problems/multiply-strings/)
