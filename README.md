@@ -11,7 +11,7 @@ Typescript examples resolving LeetCode or HackerRank exercises
           * [Integer to roman](https://leetcode.com/problems/integer-to-roman/)
           * [Plus one](./src/leetCode/algorithms/easy/plusOne.md)
         * Medium
-          * [Add two numbers](https://leetcode.com/problems/add-two-numbers/)
+          * [Add two numbers](./src/leetCode/algorithms/medium/addTwoNumbers.md)
           * [Multiply strings](https://leetcode.com/problems/multiply-strings/)
 * [HackerRank](https://www.hackerrank.com)
     * Algorithms

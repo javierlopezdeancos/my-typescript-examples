@@ -24,6 +24,19 @@ describe("addTwoNumbers", (): void => {
       }
     };
 
+    /*
+    const c = {
+      val: 7,
+      next: {
+        val: 0,
+        next: {
+          val: 8,
+          next: null
+        }
+      }
+    };
+    */
+
     const eightNode = new Node(8, null);
     const zeroNode = new Node(0, eightNode);
     const sevenNode = new Node(7, zeroNode);
