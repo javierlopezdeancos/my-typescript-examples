@@ -34,6 +34,11 @@
  */
 
 function getArrayFromInteger(int: number): number[] {
+  /**
+   * Other option to the same implementation.
+   * const s = int.toString()
+   * return s.split('').map(Number)
+   */
   const stringToNumber = (str: string) => Number(str);
   return Array.from(String(int), stringToNumber);
 }
