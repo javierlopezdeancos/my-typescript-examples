@@ -10,11 +10,11 @@ Complete the `aVeryBigSum` function in the editor. It must return the sum of all
 
 `aVeryBigSum `has the following parameter(s):
 
-* `int ar[n]`: an array of integers .
+- `int ar[n]`: an array of integers .
 
 ### Return
 
-* `long`: the sum of all array elements
+- `long`: the sum of all array elements
 
 ### Input Format
 
@@ -38,4 +38,5 @@ Return the integer sum of the elements in the array.
 ```
 5000000015
 ```
-*Note*: When we add several integer values, the resulting sum might exceed the [max range](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER). You might need to use long int
+
+_Note_: When we add several integer values, the resulting sum might exceed the [max range](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER). You might need to use long int

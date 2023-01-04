@@ -1,16 +1,16 @@
-import { addTwoNumbers, Node } from "./addTwoNumbers";
+import { addTwoNumbers, Node } from './addTwoNumbers';
 
-describe("addTwoNumbers", (): void => {
-  test("should sum nodes with same levels", function () {
+describe('addTwoNumbers', (): void => {
+  test('should sum nodes with same levels', function () {
     const a = {
       val: 2,
       next: {
         val: 4,
         next: {
           val: 3,
-          next: null
-        }
-      }
+          next: null,
+        },
+      },
     };
 
     const b = {
@@ -19,9 +19,9 @@ describe("addTwoNumbers", (): void => {
         val: 6,
         next: {
           val: 4,
-          next: null
-        }
-      }
+          next: null,
+        },
+      },
     };
 
     /*
@@ -51,13 +51,13 @@ describe("addTwoNumbers", (): void => {
     expect(addTwoNumbers(a, b)).toStrictEqual(expected);
   });
 
-  test("should sum when one list is longer than the other", function () {
+  test('should sum when one list is longer than the other', function () {
     const a = {
       val: 0,
       next: {
         val: 1,
-        next: null
-      }
+        next: null,
+      },
     };
 
     const b = {
@@ -66,9 +66,9 @@ describe("addTwoNumbers", (): void => {
         val: 1,
         next: {
           val: 2,
-          next: null
-        }
-      }
+          next: null,
+        },
+      },
     };
 
     const twoLastNode = new Node(2, null);
@@ -85,15 +85,15 @@ describe("addTwoNumbers", (): void => {
     expect(addTwoNumbers(a, b)).toStrictEqual(expected);
   });
 
-  test("should sum when one list is null, which means an empty list", function () {
+  test('should sum when one list is null, which means an empty list', function () {
     const a = null;
 
     const b = {
       val: 0,
       next: {
         val: 1,
-        next: null
-      }
+        next: null,
+      },
     };
 
     const oneNode = new Node(1, null);
@@ -109,18 +109,18 @@ describe("addTwoNumbers", (): void => {
     expect(addTwoNumbers(a, b)).toStrictEqual(expected);
   });
 
-  test("should sum if could have an extra carry of one at the end, which is easy to forget", function () {
+  test('should sum if could have an extra carry of one at the end, which is easy to forget', function () {
     const a = {
       val: 9,
       next: {
         val: 9,
-        next: null
-      }
+        next: null,
+      },
     };
 
     const b = {
       val: 1,
-      next: null
+      next: null,
     };
 
     const oneNode = new Node(1, null);

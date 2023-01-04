@@ -30,25 +30,25 @@ export function staircase(n: number): string {
   let matrix: string[] = [];
 
   for (let r = 0; r <= n - 1; r++) {
-    let row = new Array(n + 1).fill(" ");
+    let row = new Array(n + 1).fill(' ');
     const columnMaxWhiteSpace = n - (r + k);
 
     for (let c = 0; c <= n; c++) {
       if (c === n) {
-        row[c] = "\n";
+        row[c] = '\n';
       } else {
         if (columnMaxWhiteSpace >= 0) {
           if (c > columnMaxWhiteSpace) {
-            row[c] = "#";
+            row[c] = '#';
           }
         } else {
-          row[c] = "#";
+          row[c] = '#';
         }
       }
     }
 
-    matrix[r] = row.join("");
+    matrix[r] = row.join('');
   }
 
-  return matrix.join("");
+  return matrix.join('');
 }

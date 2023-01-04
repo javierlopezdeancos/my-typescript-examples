@@ -2,7 +2,7 @@
 
 [Leet Code url](https://leetcode.com/problems/add-binary/)
 
- Given two binary strings a and b, return their sum as a binary string.
+Given two binary strings a and b, return their sum as a binary string.
 
 **Example 1:**
 
@@ -19,9 +19,10 @@ Output: "10101"
 ```
 
 **Constraints:**
-  * 1 <= a.length, b.length <= 104
-  *  a and b consist only of '0' or '1' characters.
-  *  Each string does not contain leading zeros except for the zero itself.
+
+- 1 <= a.length, b.length <= 104
+- a and b consist only of '0' or '1' characters.
+- Each string does not contain leading zeros except for the zero itself.
 
 **Solution**
 

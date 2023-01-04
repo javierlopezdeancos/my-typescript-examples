@@ -2,7 +2,6 @@
 
 Take a look to the complete description of [exercise in HackerRank](https://www.hackerrank.com/challenges/staircase/)
 
-
 Staircase detail
 
 This is a staircase of size :
@@ -24,7 +23,7 @@ Complete the `staircase` function in the editor.
 
 `staircase` has the following parameter(s):
 
-* `int n`: an integer
+- `int n`: an integer
 
 ### Print
 
@@ -40,7 +39,7 @@ Constraints
 
 ### Output Format
 
-Print a staircase of size  `n` using # symbols and spaces.
+Print a staircase of size `n` using # symbols and spaces.
 
 **Note**: The last line must have `0` spaces in it.
 

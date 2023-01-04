@@ -64,11 +64,7 @@ function multiply(multiplier: number, multiplied: number[]) {
   return ps;
 }
 
-function createSumMatrix(
-  sckeletonSumMatrix: number[][],
-  multiplier: number[],
-  multiplied: number[]
-) {
+function createSumMatrix(sckeletonSumMatrix: number[][], multiplier: number[], multiplied: number[]) {
   for (let mr = multiplier.length - 1; mr >= 0; mr--) {
     sckeletonSumMatrix[mr] = multiply(multiplier[mr], multiplied);
   }
@@ -106,12 +102,7 @@ function addZerosToRowInSumMatrix(
   return row;
 }
 
-function addZerosToSumMatrix(
-  sumMatrix: number[][],
-  rows: number,
-  columns: number,
-  spaces: number
-): number[][] {
+function addZerosToSumMatrix(sumMatrix: number[][], rows: number, columns: number, spaces: number): number[][] {
   sumMatrix.forEach((sumMatrixRow: number[], r: number) => {
     addZerosToRowInSumMatrix(sumMatrixRow, rows, columns, spaces, r);
   });
@@ -119,10 +110,7 @@ function addZerosToSumMatrix(
   return sumMatrix;
 }
 
-function getProductsFromSumMatrixWithZeros(
-  matrix: number[][],
-  columns: number
-): number[] {
+function getProductsFromSumMatrixWithZeros(matrix: number[][], columns: number): number[] {
   const sum = new Array(columns) as number[];
   const carry = new Array(columns) as boolean[];
 
@@ -144,43 +132,30 @@ function getProductsFromSumMatrixWithZeros(
 }
 
 function removeLeftZeros(chars: string[]): string[] {
-  const firstNumberFromLeft = chars.findIndex(
-    (char: string): boolean => char !== "0"
-  );
+  const firstNumberFromLeft = chars.findIndex((char: string): boolean => char !== '0');
   return chars.slice(firstNumberFromLeft, chars.length);
 }
 
 function getStringProduct(products: number[]): string {
   const productsStrings = products.map((p: number): string => String(p));
-  return removeLeftZeros(productsStrings).join("");
+  return removeLeftZeros(productsStrings).join('');
 }
 
 export function multiplyStrings(string1: string, string2: string): string {
-  const multiplied = string1.split("").map((s) => Number(s));
-  const multiplier = string2.split("").map((s) => Number(s));
+  const multiplied = string1.split('').map((s) => Number(s));
+  const multiplier = string2.split('').map((s) => Number(s));
 
   const multipliedLength = string1.length;
   const multiplierLength = string2.length;
 
   const rows = multiplierLength;
   const columns = multipliedLength * 2;
-  const sckeletonSumMatrix = createMatrix(
-    multiplierLength,
-    multipliedLength * 2
-  );
+  const sckeletonSumMatrix = createMatrix(multiplierLength, multipliedLength * 2);
   const sumMatrix = createSumMatrix(sckeletonSumMatrix, multiplier, multiplied);
 
-  const sumMatrixWithZeros = addZerosToSumMatrix(
-    sumMatrix,
-    rows,
-    columns,
-    multipliedLength
-  );
+  const sumMatrixWithZeros = addZerosToSumMatrix(sumMatrix, rows, columns, multipliedLength);
 
-  const products = getProductsFromSumMatrixWithZeros(
-    sumMatrixWithZeros,
-    columns
-  );
+  const products = getProductsFromSumMatrixWithZeros(sumMatrixWithZeros, columns);
 
   return getStringProduct(products);
 }

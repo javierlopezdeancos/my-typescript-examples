@@ -20,11 +20,11 @@ Complete the `diagonalDifference` function.
 
 diagonalDifference takes the following parameter:
 
-* int arr[n][m]: an array of integers
+- int arr[n][m]: an array of integers
 
 ### Return
 
-* int: the absolute diagonal difference
+- int: the absolute diagonal difference
 
 ### Input Format
 
@@ -34,7 +34,7 @@ Each of the next `n` lines describes a row, `arr[i]`, and consists of `n` space-
 
 ### Constraints
 
-* `-100<= arr[i][j] >= 100`
+- `-100<= arr[i][j] >= 100`
 
 ### Output Format
 

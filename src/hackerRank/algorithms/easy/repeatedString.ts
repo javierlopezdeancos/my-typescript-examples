@@ -5,19 +5,17 @@ export function repeatedString(chars: string, numberOfCharsToCount: number): num
   const needRepeat = numberOfCharsToCount > chars.length;
 
   if (!needRepeat) {
-    return chars
-      .split('')
-      .filter((char: string, index: number) => (char === 'a') && (index < numberOfCharsToCount)).length;
+    return chars.split('').filter((char: string, index: number) => char === 'a' && index < numberOfCharsToCount).length;
   }
 
-  const areDifferentCharsThanA = chars.split('').filter(c => c !== 'a').length;
+  const areDifferentCharsThanA = chars.split('').filter((c) => c !== 'a').length;
 
   if (!areDifferentCharsThanA) {
     return numberOfCharsToCount;
   }
 
   const numberOfLoopsAreInteger = numberOfCharsToCount % l === 0;
-  const numberOfACharsCounted = chars.split('').filter(c => c === 'a').length;
+  const numberOfACharsCounted = chars.split('').filter((c) => c === 'a').length;
   const realNumberOfLoops = numberOfCharsToCount / l;
 
   if (numberOfLoopsAreInteger) {

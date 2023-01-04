@@ -71,27 +71,18 @@ export function romanToInteger(rs: string): number {
     IX = 9,
     V = 5,
     IV = 4,
-    I = 1
+    I = 1,
   }
 
-  const RomanSpecialCases = [
-    Roman[900],
-    Roman[400],
-    Roman[90],
-    Roman[40],
-    Roman[9],
-    Roman[4]
-  ];
+  const RomanSpecialCases = [Roman[900], Roman[400], Roman[90], Roman[40], Roman[9], Roman[4]];
 
   let result = 0;
 
-  const rchars = (rs.split("") as unknown) as Roman[];
+  const rchars = rs.split('') as unknown as Roman[];
   let len = rchars.length;
 
   for (let i = 0; i < len; i++) {
-    const isASpecialCase = RomanSpecialCases.includes(
-      String(rchars[i] + rchars[i + 1])
-    );
+    const isASpecialCase = RomanSpecialCases.includes(String(rchars[i] + rchars[i + 1]));
 
     if (isASpecialCase) {
       result += Number(Roman[rchars[i] + rchars[i + 1]]);

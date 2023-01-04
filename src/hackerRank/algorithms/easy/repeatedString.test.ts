@@ -26,7 +26,12 @@ describe('Repeated String', () => {
   });
 
   it('should return 51574523448 a chars counted in the first 736778906400 chars repeated infinite times "kmretasscityylpdhuwjirnqimlkcgxubxmsxpypgzxtenweirknjtasxtvxemtwxuarabssvqdnktqadhyktagjxoanknhgilnm"', () => {
-    expect(repeatedString('kmretasscityylpdhuwjirnqimlkcgxubxmsxpypgzxtenweirknjtasxtvxemtwxuarabssvqdnktqadhyktagjxoanknhgilnm', 736778906400)).toEqual(51574523448);
+    expect(
+      repeatedString(
+        'kmretasscityylpdhuwjirnqimlkcgxubxmsxpypgzxtenweirknjtasxtvxemtwxuarabssvqdnktqadhyktagjxoanknhgilnm',
+        736778906400
+      )
+    ).toEqual(51574523448);
   });
 
   it('should return 138511468548 a chars counted in the first 554045874191 chars repeated infinite times "cfimaakj"', () => {

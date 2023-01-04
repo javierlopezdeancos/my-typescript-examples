@@ -43,16 +43,16 @@ for
 */
 
 export function climbingLeaderBoard(rankingScores: number[], playerScores: number[]): number[] | undefined {
-  let playerRanking = []
+  let playerRanking = [];
 
-  for (let i = 0, playerScore = playerScores.pop(), uniques = 0;  i < rankingScores.length; ++i) {
+  for (let i = 0, playerScore = playerScores.pop(), uniques = 0; i < rankingScores.length; ++i) {
     let rankingScore = rankingScores[i];
     const previousRankingScore = rankingScores[i - 1];
 
-    if (rankingScore !== previousRankingScore ) {
+    if (rankingScore !== previousRankingScore) {
       ++uniques;
 
-      while (playerScore && ( playerScore >= rankingScore )) {
+      while (playerScore && playerScore >= rankingScore) {
         playerRanking.unshift(uniques);
         playerScore = playerScores.pop();
       }

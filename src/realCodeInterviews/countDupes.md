@@ -8,22 +8,20 @@ You are free to ask me questions, use Google, or whatever else you need to do. G
 
 ```ts
 const CITIES = [
-  "nashville",
-  "nashville",
-  "los angeles",
-  "nashville",
-  "memphis",
-  "barcelona",
-  "sevillia",
-  "isla canary",
-  "barcelona",
+  'nashville',
+  'nashville',
+  'los angeles',
+  'nashville',
+  'memphis',
+  'barcelona',
+  'sevillia',
+  'isla canary',
+  'barcelona',
 ];
 
 export const countDupes = (cities: string[]): number => {
   // TODO: Fill in the code for this function to return
   // the correct number of items that are repeated in the
   // given list.
-
-
 };
 ```

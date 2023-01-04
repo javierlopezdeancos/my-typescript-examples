@@ -12,6 +12,28 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 
 **Example 1:**
 
+Inputs:
+
+```mermaid
+flowchart LR
+    2 --> 4
+    4 --> 3
+```
+
+```mermaid
+flowchart LR
+    5 --> 6
+    6 --> 4
+```
+
+Outputs:
+
+```mermaid
+flowchart LR
+    7 --> 0
+    0 --> 8
+```
+
 ```
 Input: l1 = [2,4,3], l2 = [5,6,4]
 Output: [7,0,8]

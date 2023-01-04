@@ -99,4 +99,3 @@ export function addArrayFormOfInteger(num: number[], k: number): number[] {
 
   return sum;
 }
-

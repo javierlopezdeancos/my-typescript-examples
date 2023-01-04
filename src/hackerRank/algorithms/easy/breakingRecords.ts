@@ -31,7 +31,7 @@ export function breakingRecords(scores: number[]): number[] {
     }
 
     if (s > 0) {
-      const prevScore = scores[s-1];
+      const prevScore = scores[s - 1];
 
       if (score < min) {
         lessThanMin++;
