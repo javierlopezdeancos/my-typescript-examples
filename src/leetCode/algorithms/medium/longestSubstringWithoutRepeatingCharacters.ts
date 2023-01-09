@@ -1,53 +1,26 @@
 export function lengthOfLongestSubstring(s: string): number {
-  let substring: string[] = [];
-  let sizeOfLongestSubstring: number = 0;
+  const stringLength = s.length;
 
-  const stringCharacters = [...s];
+  let longestLength = 0;
 
-  for (let i = 0; i < stringCharacters.length; i++) {
-    const stringCharacter = stringCharacters[i];
-    const characterIsRepeatedInTheLastSubstringCharacterCompared =
-      substring?.length > 0 ? substring[substring.length] === stringCharacter : false;
+  for (var i = 0; i < stringLength; i++) {
+    // Default values in visited are false
+    const visited = new Array(256);
 
-    if (characterIsRepeatedInTheLastSubstringCharacterCompared) {
-      substring = [];
-      substring.push(stringCharacter);
-      continue;
-    }
+    for (var j = i; j < stringLength; j++) {
+      const currentCharacterIsVisited = visited[s.charCodeAt(j)] === true;
 
-    /*
-    const characterIsRepeatedInSubstring = substring.includes(stringCharacter);
-
-    if (characterIsRepeatedInSubstring) {
-      if (s === 'dvdf') console.log(stringCharacter);
-
-      const charactersToMoveIntoNextSubstring: string[] = [];
-
-      charactersToMoveIntoNextSubstring.push(stringCharacter);
-
-      for (let j = substring.length; j = 0; j--) {
-        if (s === 'dvdf') console.log(charactersToMoveIntoNextSubstring);
-
-        const subStringCharacter = substring[j];
-
-        if (subStringCharacter === stringCharacter) {
-          break;
-        }
-
-        charactersToMoveIntoNextSubstring.unshift(subStringCharacter);
+      if (currentCharacterIsVisited) {
+        break;
       }
-    }
-    */
 
-    substring.push(stringCharacter);
+      // Update the result if this window is larger
+      longestLength = Math.max(longestLength, j - i + 1);
 
-    if (substring.length > sizeOfLongestSubstring) {
-      sizeOfLongestSubstring = substring.length;
+      // mark current character as visited.
+      visited[s.charCodeAt(j)] = true;
     }
   }
 
-  return sizeOfLongestSubstring;
+  return longestLength;
 }
-
-// is repeated in the last character compared
-// is repeated but not in the last character compared
