@@ -12,8 +12,6 @@ export function miniMaxSum(nbs: number[]): string {
       subSum = subSum + subNbs[j];
     }
 
-    console.log('subSum', subSum);
-
     if (subSum > max || i === 0) {
       max = subSum;
     }
