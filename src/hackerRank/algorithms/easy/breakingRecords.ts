@@ -14,6 +14,17 @@
  * ----------
  *
  * scores = [10, 5, 20, 20, 4, 5, 2, 25, 1]
+ *                                  Count
+    Game  Score  Minimum  Maximum   Min Max
+     0      10     10       10       0   0
+     1       5      5       10       1   0
+     2      20      5       20       1   1
+     3      20      5       20       1   1
+     4       4      4       20       2   1
+     5       5      4       20       2   1
+     6       2      2       20       3   1
+     7      25      2       25       3   2
+     8       1      1       25       4   2
 */
 
 export function breakingRecords(scores: number[]): number[] {
@@ -31,8 +42,6 @@ export function breakingRecords(scores: number[]): number[] {
     }
 
     if (s > 0) {
-      const prevScore = scores[s - 1];
-
       if (score < min) {
         lessThanMin++;
         min = score;
