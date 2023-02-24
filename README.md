@@ -3,7 +3,10 @@
 # My typescript examples
 
 Typescript examples resolving LeetCode or HackerRank exercises
-
+- Algorithms
+  [Binary tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
+    - Breadth first value.
+    - Depth First value.
 - [LeetCode](https://leetcode.com)
   - Algorithms
     - Easy
