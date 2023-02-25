@@ -1,4 +1,4 @@
-import { depthFirstValues, depthFirstValuesRecursiveVersion } from './depthFirstValues';
+import { treeIncludes } from './treeIncludes';
 import { createNode } from './createNode.factory';
 import type { NodeType } from './Node.type';
 
@@ -9,7 +9,7 @@ let a: NodeType<string>,
   e: NodeType<string>,
   f: NodeType<string>;
 
-describe('binary tree', () => {
+describe('binary tree, tree includes', () => {
   beforeEach(() => {
     // Creating nodes to our mock binary tree
     a = createNode<string>({ value: 'a' });
@@ -20,7 +20,7 @@ describe('binary tree', () => {
     f = createNode<string>({ value: 'f' });
   });
 
-  test('should return all values across the binary tree in the correct order. Case 1', () => {
+  test('should return true in target value is in the binary tree. Case 1', () => {
     // Relation nodes to our mock binary tree
     a.left = b;
     a.right = c;
@@ -37,14 +37,14 @@ describe('binary tree', () => {
           d   e   f
     */
 
-    const expected = depthFirstValues(a);
-    const recursiveExpected = depthFirstValuesRecursiveVersion(a);
+    const expectedMatch = treeIncludes(a, 'e');
+    const expectedNotMatch = treeIncludes(a, 'x');
 
-    expect(expected).toEqual(['a', 'b', 'd', 'e', 'c', 'f']);
-    expect(recursiveExpected).toEqual(['a', 'b', 'd', 'e', 'c', 'f']);
+    expect(expectedMatch).toEqual(true);
+    expect(expectedNotMatch).toEqual(false);
   });
 
-  test('should return all values across the binary tree in the correct order. Case 2', () => {
+  test('should return true in target value is in the binary tree. Case 2', () => {
     // Relation nodes to our mock binary tree
     a.right = b;
     b.left = c;
@@ -64,10 +64,10 @@ describe('binary tree', () => {
                   e
     */
 
-    const expected = depthFirstValues(a);
-    const recursiveExpected = depthFirstValuesRecursiveVersion(a);
+    const expectedMatch = treeIncludes(a, 'd');
+    const expectedNotMatch = treeIncludes(a, 'i');
 
-    expect(expected).toEqual(['a', 'b', 'c', 'd', 'e']);
-    expect(recursiveExpected).toEqual(['a', 'b', 'c', 'd', 'e']);
+    expect(expectedMatch).toEqual(true);
+    expect(expectedNotMatch).toEqual(false);
   });
 });

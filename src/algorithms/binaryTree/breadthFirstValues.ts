@@ -1,4 +1,4 @@
-import { NodeInterface } from './Node.interface';
+import { NodeType } from './Node.type';
 
 /**
        a
@@ -10,13 +10,13 @@ import { NodeInterface } from './Node.interface';
   -> [a, b, c, d, e, f]
 **/
 
-export const breadthFirstValues = <V>(rootNode: NodeInterface<V>): V[] => {
+export const breadthFirstValues = <V>(rootNode: NodeType<V>): V[] => {
   if (rootNode === null) {
     return [];
   }
 
   const values: V[] = [];
-  const queue: NodeInterface<V>[] = [rootNode];
+  const queue: NodeType<V>[] = [rootNode];
 
   while (queue.length > 0) {
     const current = queue.shift();

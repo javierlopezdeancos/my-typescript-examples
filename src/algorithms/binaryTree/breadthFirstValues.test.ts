@@ -1,31 +1,23 @@
-import { breadthFirstValues } from './breadthFirstValue';
-import type { NodeInterface } from './Node.interface';
+import { breadthFirstValues } from './breadthFirstValues';
+import { createNode } from './createNode.factory';
+import type { NodeType } from './Node.type';
 
-class Node<V> implements NodeInterface<V> {
-  value: V;
+let a: NodeType<string>,
+  b: NodeType<string>,
+  c: NodeType<string>,
+  d: NodeType<string>,
+  e: NodeType<string>,
+  f: NodeType<string>;
 
-  left: NodeInterface<V> | undefined;
-
-  right: NodeInterface<V> | undefined;
-
-  constructor(value: V) {
-    this.value = value;
-    this.left = undefined;
-    this.right = undefined;
-  }
-}
-
-let a: Node<string>, b: Node<string>, c: Node<string>, d: Node<string>, e: Node<string>, f: Node<string>;
-
-describe('binary tree', () => {
+describe('binary tree: breadth first values', () => {
   beforeEach(() => {
     // Creating nodes to our mock binary tree
-    a = new Node<string>('a');
-    b = new Node<string>('b');
-    c = new Node<string>('c');
-    d = new Node<string>('d');
-    e = new Node<string>('e');
-    f = new Node<string>('f');
+    a = createNode<string>({ value: 'a' });
+    b = createNode<string>({ value: 'b' });
+    c = createNode<string>({ value: 'c' });
+    d = createNode<string>({ value: 'd' });
+    e = createNode<string>({ value: 'e' });
+    f = createNode<string>({ value: 'f' });
   });
 
   test('should return all values across the binary tree in the correct order. Case 1', () => {

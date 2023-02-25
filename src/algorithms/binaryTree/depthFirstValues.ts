@@ -1,12 +1,12 @@
-import type { NodeInterface } from './Node.interface';
+import type { NodeType } from './Node.type';
 
-export const depthFirstValues = <V>(rootNode: NodeInterface<V>): V[] => {
+export const depthFirstValues = <V>(rootNode: NodeType<V>): V[] => {
   if (rootNode === null) {
     return [];
   }
 
   const values: V[] = [];
-  const stack: NodeInterface<V>[] = [rootNode];
+  const stack: NodeType<V>[] = [rootNode];
 
   while (stack.length > 0) {
     const current = stack.pop();
@@ -27,13 +27,15 @@ export const depthFirstValues = <V>(rootNode: NodeInterface<V>): V[] => {
   return values;
 };
 
-export const depthFirstValuesRecursiveVersion = <V>(rootNode: NodeInterface<V>): V[] => {
+export const depthFirstValuesRecursiveVersion = <V>(rootNode: NodeType<V>): V[] => {
   if (rootNode === null) {
     return [];
   }
 
   let values = [rootNode.value];
-  let leftValues: V[], rightValues: V[];
+
+  let leftValues: V[];
+  let rightValues: V[];
 
   if (rootNode?.left) {
     leftValues = depthFirstValuesRecursiveVersion(rootNode.left);
