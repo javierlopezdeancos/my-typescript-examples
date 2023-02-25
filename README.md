@@ -4,9 +4,14 @@
 
 Typescript examples resolving LeetCode or HackerRank exercises
 - Algorithms
+  [Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
   [Binary tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
-    - Breadth first value.
-    - Depth First value.
+    - Breadth first values.
+    - Depth first values.
+    - Tree includes.
+    - Tree min value.
+    - Tree sum.
+    - Max root to leaf path sum.
 - [LeetCode](https://leetcode.com)
   - Algorithms
     - Easy
