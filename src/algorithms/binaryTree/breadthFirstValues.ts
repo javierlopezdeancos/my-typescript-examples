@@ -14,13 +14,13 @@ import { NodeType } from './Node.type';
  *
  * No recursive version
  */
-export const breadthFirstValues = <V>(rootNode: NodeType<V>): V[] => {
+export const breadthFirstValues = <NODE_VALUE>(rootNode: NodeType<NODE_VALUE>): NODE_VALUE[] => {
   if (rootNode === null) {
     return [];
   }
 
-  const values: V[] = [];
-  const queue: NodeType<V>[] = [rootNode];
+  const values: NODE_VALUE[] = [];
+  const queue: NodeType<NODE_VALUE>[] = [rootNode];
 
   while (queue.length > 0) {
     const current = queue.shift();

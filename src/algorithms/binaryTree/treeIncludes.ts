@@ -1,6 +1,6 @@
 import { NodeType } from './Node.type';
 
-export const treeIncludes = <V>(rootNode: NodeType<V>, target: V): boolean => {
+export const treeIncludes = <NODE_VALUE>(rootNode: NodeType<NODE_VALUE>, target: NODE_VALUE): boolean => {
   if (rootNode === null) {
     return false;
   }

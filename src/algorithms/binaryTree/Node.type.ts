@@ -1,5 +1,5 @@
-export type NodeType<V> = {
-  value: V;
-  left?: NodeType<V>;
-  right?: NodeType<V>;
+export type NodeType<NODE_VALUE> = {
+  value: NODE_VALUE;
+  left?: NodeType<NODE_VALUE>;
+  right?: NodeType<NODE_VALUE>;
 };
