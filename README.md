@@ -4,7 +4,7 @@
 
 Typescript examples resolving LeetCode or HackerRank exercises
 - Algorithms
-  -[Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
+  - [Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
     - [Linked list values](./src/algorithms//linkedList/linkedListValues.md).
     - [Sum list](./src/algorithms//linkedList/sumList.md).
     - [Get node values](./src/algorithms//linkedList/findTarget.md).
