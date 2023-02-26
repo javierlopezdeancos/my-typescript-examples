@@ -4,13 +4,13 @@
 
 Typescript examples resolving LeetCode or HackerRank exercises
 - Algorithms
-  [Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
-   - [Linked list values](./src/algorithms//linkedList/linkedListValues.md).
-   - [Sum list](./src/algorithms//linkedList/sumList.md).
-   - [Get node values](./src/algorithms//linkedList/findTarget.md).
-   - [Find target](./src/algorithms//linkedList/findTarget.md).
-   - [Reverse list](./src/algorithms//linkedList/reverseList.md).
-   - [Zipper list](./src/algorithms//linkedList/zipperLists.md).
+  -[Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
+    - [Linked list values](./src/algorithms//linkedList/linkedListValues.md).
+    - [Sum list](./src/algorithms//linkedList/sumList.md).
+    - [Get node values](./src/algorithms//linkedList/findTarget.md).
+    - [Find target](./src/algorithms//linkedList/findTarget.md).
+    - [Reverse list](./src/algorithms//linkedList/reverseList.md).
+    - [Zipper list](./src/algorithms//linkedList/zipperLists.md).
   [Binary tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
     - Breadth first values.
     - Depth first values.
