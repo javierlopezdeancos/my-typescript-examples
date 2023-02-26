@@ -1,4 +1,4 @@
-import { depthFirstValues, depthFirstValuesRecursiveVersion } from './depthFirstValues';
+import { depthFirstValues } from './depthFirstValues';
 import { createNode } from './createNode.factory';
 import type { NodeType } from './Node.type';
 
@@ -38,10 +38,7 @@ describe('binary tree', () => {
     */
 
     const expected = depthFirstValues(a);
-    const recursiveExpected = depthFirstValuesRecursiveVersion(a);
-
     expect(expected).toEqual(['a', 'b', 'd', 'e', 'c', 'f']);
-    expect(recursiveExpected).toEqual(['a', 'b', 'd', 'e', 'c', 'f']);
   });
 
   test('should return all values across the binary tree in the correct order. Case 2', () => {
@@ -65,9 +62,6 @@ describe('binary tree', () => {
     */
 
     const expected = depthFirstValues(a);
-    const recursiveExpected = depthFirstValuesRecursiveVersion(a);
-
     expect(expected).toEqual(['a', 'b', 'c', 'd', 'e']);
-    expect(recursiveExpected).toEqual(['a', 'b', 'c', 'd', 'e']);
   });
 });

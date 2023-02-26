@@ -34,7 +34,7 @@ describe('binary tree: max root to leaf path sum', () => {
           / \
         11   3
        /  \   \
-      4  - 2   1
+      4 (- 2)  1
     */
 
     const expected = maxRootToLeafPathSum(a);

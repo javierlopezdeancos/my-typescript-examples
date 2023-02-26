@@ -1,4 +1,4 @@
-import { treeMinValue, treeMinValueRecursiveVersion } from './treeMinValue';
+import { treeMinValue } from './treeMinValue';
 import { createNode } from './createNode.factory';
 import type { NodeType } from './Node.type';
 
@@ -61,7 +61,7 @@ describe('binary tree: tree min value', () => {
                   2
     */
 
-    const expected = treeMinValueRecursiveVersion(a);
+    const expected = treeMinValue(a);
     expect(expected).toBe(2);
   });
 });

@@ -1,5 +1,9 @@
 import type { NodeType } from './Node.type';
 
+/**
+ *
+ * No recursive version
+ *
 export const depthFirstValues = <V>(rootNode: NodeType<V>): V[] => {
   if (rootNode === null) {
     return [];
@@ -26,8 +30,13 @@ export const depthFirstValues = <V>(rootNode: NodeType<V>): V[] => {
 
   return values;
 };
+*/
 
-export const depthFirstValuesRecursiveVersion = <V>(rootNode: NodeType<V>): V[] => {
+/**
+ *
+ * Recursive version
+ */
+export const depthFirstValues = <V>(rootNode: NodeType<V>): V[] => {
   if (rootNode === null) {
     return [];
   }
@@ -38,12 +47,12 @@ export const depthFirstValuesRecursiveVersion = <V>(rootNode: NodeType<V>): V[] 
   let rightValues: V[];
 
   if (rootNode?.left) {
-    leftValues = depthFirstValuesRecursiveVersion(rootNode.left);
+    leftValues = depthFirstValues(rootNode.left);
     values = [...values, ...leftValues];
   }
 
   if (rootNode?.right) {
-    rightValues = depthFirstValuesRecursiveVersion(rootNode.right);
+    rightValues = depthFirstValues(rootNode.right);
     values = [...values, ...rightValues];
   }
 

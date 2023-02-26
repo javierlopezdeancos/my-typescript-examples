@@ -1,5 +1,9 @@
 import { NodeType } from './Node.type';
 
+/**
+ *
+ * No recursive version
+ *
 export const treeMinValue = (rootNode: NodeType<number>): number => {
   const stack: NodeType<number>[] = [rootNode];
   let smallest: number = Infinity;
@@ -24,8 +28,14 @@ export const treeMinValue = (rootNode: NodeType<number>): number => {
 
   return smallest;
 };
+*/
 
-export const treeMinValueRecursiveVersion = (rootNode: NodeType<number>): number => {
+/**
+ *
+ * Recursive version
+ *
+ */
+export const treeMinValue = (rootNode: NodeType<number>): number => {
   if (rootNode === null) {
     return Infinity;
   }
@@ -34,11 +44,11 @@ export const treeMinValueRecursiveVersion = (rootNode: NodeType<number>): number
   let minRightValue: number = Infinity;
 
   if (rootNode?.left) {
-    minLeftValue = treeMinValueRecursiveVersion(rootNode.left);
+    minLeftValue = treeMinValue(rootNode.left);
   }
 
   if (rootNode?.right) {
-    minRightValue = treeMinValueRecursiveVersion(rootNode.right);
+    minRightValue = treeMinValue(rootNode.right);
   }
 
   if (minLeftValue < minRightValue) {

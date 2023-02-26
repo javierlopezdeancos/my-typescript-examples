@@ -5,6 +5,12 @@
 Typescript examples resolving LeetCode or HackerRank exercises
 - Algorithms
   [Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
+   - Linked list values.
+   - Sum list.
+   - Get node values.
+   - Find target.
+   - Reverse list.
+   - Zipper list.
   [Binary tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
     - Breadth first values.
     - Depth first values.
