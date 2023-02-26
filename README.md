@@ -1,4 +1,4 @@
-![meme](./assets/meme.jpg)
+![meme](./assets/boom.png)
 
 # My typescript examples
 
