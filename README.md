@@ -11,7 +11,7 @@ Typescript examples resolving LeetCode or HackerRank exercises
     - [Find target](./src/algorithms//linkedList/findTarget.md).
     - [Reverse list](./src/algorithms//linkedList/reverseList.md).
     - [Zipper list](./src/algorithms//linkedList/zipperLists.md).
-  [Binary tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
+  - [Binary tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
     - Breadth first values.
     - Depth first values.
     - Tree includes.
