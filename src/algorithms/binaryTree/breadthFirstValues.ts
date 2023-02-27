@@ -10,10 +10,6 @@ import { NodeType } from './Node.type';
   -> [a, b, c, d, e, f]
 **/
 
-/**
- *
- * No recursive version
- */
 export const breadthFirstValues = <NODE_VALUE>(rootNode: NodeType<NODE_VALUE>): NODE_VALUE[] => {
   if (rootNode === null) {
     return [];
