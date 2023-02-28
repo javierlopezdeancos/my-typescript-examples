@@ -33,11 +33,6 @@ export function createListNode(val?: number, next?: ListNodeType): ListNodeType 
 
 //        2   4   3
 //        5   6   4
-
-// curA   2n  4n  3
-// curB   5n  6n  4
-// curR   7n  0n  7
-// carry          1
 //        7   0   8
 
 export function addTwoNumbers(a: ListNodeType | null, b: ListNodeType | null): ListNodeType | null {
