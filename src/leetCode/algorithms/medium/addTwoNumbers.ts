@@ -19,24 +19,30 @@
  * }
  */
 
-export interface INode {
+export type ListNodeType = {
   val: number;
-  next: INode | null;
+  next: ListNodeType | null;
+};
+
+export function createListNode(val?: number, next?: ListNodeType): ListNodeType {
+  return {
+    val: val || 0,
+    next: next || null,
+  };
 }
 
-export class Node implements INode {
-  public val: number;
-  public next: INode | null;
+//        2   4   3
+//        5   6   4
 
-  constructor(val?: number, next?: Node | null) {
-    this.val = val === undefined ? 0 : val;
-    this.next = next === undefined ? null : next;
-  }
-}
+// curA   2n  4n  3
+// curB   5n  6n  4
+// curR   7n  0n  7
+// carry          1
+//        7   0   8
 
-export function addTwoNumbers(a: Node | null, b: Node | null): Node | null {
+export function addTwoNumbers(a: ListNodeType | null, b: ListNodeType | null): ListNodeType | null {
   let sum = 0;
-  let current = new Node(0);
+  let current = createListNode(0);
   let result = current;
 
   while (a || b) {
@@ -50,14 +56,14 @@ export function addTwoNumbers(a: Node | null, b: Node | null): Node | null {
       b = b.next;
     }
 
-    current.next = new Node(sum % 10);
+    current.next = createListNode(sum % 10);
     current = current.next;
 
     sum = sum > 9 ? 1 : 0;
   }
 
   if (sum) {
-    current.next = new Node(sum);
+    current.next = createListNode(sum);
   }
 
   return result.next;

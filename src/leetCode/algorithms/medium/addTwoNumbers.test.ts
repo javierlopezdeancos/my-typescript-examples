@@ -1,4 +1,4 @@
-import { addTwoNumbers, Node } from './addTwoNumbers';
+import { addTwoNumbers, createListNode } from './addTwoNumbers';
 
 describe('addTwoNumbers', (): void => {
   test('should sum nodes with same levels', function () {
@@ -37,18 +37,19 @@ describe('addTwoNumbers', (): void => {
     };
     */
 
-    const eightNode = new Node(8, null);
-    const zeroNode = new Node(0, eightNode);
-    const sevenNode = new Node(7, zeroNode);
+    const eightNode = createListNode(8);
+    const zeroNode = createListNode(0, eightNode);
+    const sevenNode = createListNode(7, zeroNode);
 
     //   2 -> 4 -> 3
     //   5 -> 6 -> 4  +
     //  -------------
     //   7 -> 0 -> 8
 
-    const expected = sevenNode;
+    const expected = JSON.stringify(sevenNode);
+    const received = JSON.stringify(addTwoNumbers(a, b));
 
-    expect(addTwoNumbers(a, b)).toStrictEqual(expected);
+    expect(received).toStrictEqual(expected);
   });
 
   test('should sum when one list is longer than the other', function () {
@@ -71,18 +72,19 @@ describe('addTwoNumbers', (): void => {
       },
     };
 
-    const twoLastNode = new Node(2, null);
-    const twoNode = new Node(2, twoLastNode);
-    const zeroNode = new Node(0, twoNode);
+    const twoLastNode = createListNode(2);
+    const twoNode = createListNode(2, twoLastNode);
+    const zeroNode = createListNode(0, twoNode);
 
     //   0 -> 1
     //   0 -> 1 -> 2  +
     //  -------------
     //   0 -> 2 -> 2
 
-    const expected = zeroNode;
+    const expected = JSON.stringify(zeroNode);
+    const received = JSON.stringify(addTwoNumbers(a, b));
 
-    expect(addTwoNumbers(a, b)).toStrictEqual(expected);
+    expect(received).toStrictEqual(expected);
   });
 
   test('should sum when one list is null, which means an empty list', function () {
@@ -96,17 +98,18 @@ describe('addTwoNumbers', (): void => {
       },
     };
 
-    const oneNode = new Node(1, null);
-    const zeroNode = new Node(0, oneNode);
+    const oneNode = createListNode(1);
+    const zeroNode = createListNode(0, oneNode);
 
     //
     //   0 -> 1  +
     //  -------
     //   0 -> 1
 
-    const expected = zeroNode;
+    const expected = JSON.stringify(zeroNode);
+    const received = JSON.stringify(addTwoNumbers(a, b));
 
-    expect(addTwoNumbers(a, b)).toStrictEqual(expected);
+    expect(received).toStrictEqual(expected);
   });
 
   test('should sum if could have an extra carry of one at the end, which is easy to forget', function () {
@@ -123,17 +126,18 @@ describe('addTwoNumbers', (): void => {
       next: null,
     };
 
-    const oneNode = new Node(1, null);
-    const zeroNode = new Node(0, oneNode);
-    const zeroFirstNode = new Node(0, zeroNode);
+    const oneNode = createListNode(1);
+    const zeroNode = createListNode(0, oneNode);
+    const zeroFirstNode = createListNode(0, zeroNode);
 
     //   9 -> 9
     //   1      +
     //  -------
     //   0 -> 0 -> 1
 
-    const expected = zeroFirstNode;
+    const expected = JSON.stringify(zeroFirstNode);
+    const received = JSON.stringify(addTwoNumbers(a, b));
 
-    expect(addTwoNumbers(a, b)).toStrictEqual(expected);
+    expect(received).toStrictEqual(expected);
   });
 });
