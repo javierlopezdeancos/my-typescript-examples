@@ -24,7 +24,7 @@
  * ------
  *  56088
  *
- * Buid Matrix 5x4
+ * Build Matrix 5x4
  * ---------------
  * x x 7 3 8
  * x 6 1 5 x
@@ -64,12 +64,12 @@ function multiply(multiplier: number, multiplied: number[]) {
   return ps;
 }
 
-function createSumMatrix(sckeletonSumMatrix: number[][], multiplier: number[], multiplied: number[]) {
+function createSumMatrix(skeletonSumMatrix: number[][], multiplier: number[], multiplied: number[]) {
   for (let mr = multiplier.length - 1; mr >= 0; mr--) {
-    sckeletonSumMatrix[mr] = multiply(multiplier[mr], multiplied);
+    skeletonSumMatrix[mr] = multiply(multiplier[mr], multiplied);
   }
 
-  return sckeletonSumMatrix;
+  return skeletonSumMatrix;
 }
 
 function addZerosToRowInSumMatrix(
@@ -150,8 +150,8 @@ export function multiplyStrings(string1: string, string2: string): string {
 
   const rows = multiplierLength;
   const columns = multipliedLength * 2;
-  const sckeletonSumMatrix = createMatrix(multiplierLength, multipliedLength * 2);
-  const sumMatrix = createSumMatrix(sckeletonSumMatrix, multiplier, multiplied);
+  const skeletonSumMatrix = createMatrix(multiplierLength, multipliedLength * 2);
+  const sumMatrix = createSumMatrix(skeletonSumMatrix, multiplier, multiplied);
 
   const sumMatrixWithZeros = addZerosToSumMatrix(sumMatrix, rows, columns, multipliedLength);
 
