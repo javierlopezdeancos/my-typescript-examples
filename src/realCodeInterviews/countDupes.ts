@@ -1,19 +1,21 @@
 export const countDupes = (cities: string[]): number => {
-  const dupes: string[] = [];
+  const repeatedCities: string[] = [];
   const uniqueCities = new Set();
 
   for (const city of cities) {
-    const isDupe = dupes.includes(city);
-    const isRepeated = uniqueCities.has(city);
+    const isUniqueCity = uniqueCities.has(city);
 
-    if (!isDupe && isRepeated) {
-      dupes.push(city);
+    if (!isUniqueCity) {
+      uniqueCities.add(city);
+      continue;
     }
 
-    if (!isRepeated) {
-      uniqueCities.add(city);
+    const isRepeated = repeatedCities.includes(city);
+
+    if (isUniqueCity && !isRepeated) {
+      repeatedCities.push(city);
     }
   }
 
-  return dupes.length;
+  return repeatedCities.length;
 };

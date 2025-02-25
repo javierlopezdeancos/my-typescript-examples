@@ -1,9 +1,7 @@
 import { undirectedPath } from './undirectedPath';
-import { GraphType } from './Graph.type';
-import { EdgeType } from './Edge.type';
+import type { EdgeType } from './Edge.type';
 
 let edges: EdgeType[];
-let graph: GraphType;
 
 describe('graph: has path', () => {
   beforeEach(() => {
@@ -15,6 +13,7 @@ describe('graph: has path', () => {
       ['o', 'n'],
     ];
 
+    /**
     graph = {
       i: ['j', 'k'],
       j: ['i'],
@@ -24,6 +23,7 @@ describe('graph: has path', () => {
       o: ['n'],
       n: ['o'],
     };
+    **/
   });
   test('should', () => {
     expect(true).toBe(true);
@@ -34,25 +34,23 @@ describe('graph: has path', () => {
     expect(expected).toBe(true);
   });
 
-  /*
   test('should return true if exist an undirected path from source node to destination node. Caso 2', () => {
-    const expected = undirectedPath(graph, 'm', 'j');
+    const expected = undirectedPath('m', 'j', edges);
     expect(expected).toBe(true);
   });
 
   test('should return true if exist an undirected path from source node to destination node. Caso 2', () => {
-    const expected = undirectedPath(graph, 'l', 'j');
+    const expected = undirectedPath('l', 'j', edges);
     expect(expected).toBe(true);
   });
 
   test('should return false if exist an undirected path from source node to destination node. Caso 2', () => {
-    const expected = undirectedPath(graph, 'k', 'o');
+    const expected = undirectedPath('k', 'o', edges);
     expect(expected).toBe(false);
   });
 
   test('should return false if exist an undirected path from source node to destination node. Caso 2', () => {
-    const expected = undirectedPath(graph, 'i', 'o');
+    const expected = undirectedPath('i', 'o', edges);
     expect(expected).toBe(false);
   });
-*/
 });

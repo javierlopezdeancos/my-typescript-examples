@@ -19,12 +19,14 @@
  * }
  */
 
+export type ValueType = number;
+
 export type ListNodeType = {
-  val: number;
+  val: ValueType;
   next: ListNodeType | null;
 };
 
-export function createListNode(val?: number, next?: ListNodeType): ListNodeType {
+export function createListNode(val?: ValueType, next?: ListNodeType): ListNodeType {
   return {
     val: val || 0,
     next: next || null,
