@@ -1,8 +1,9 @@
-![meme](./assets/boom.png)
-
 # My typescript examples
 
+![meme](./assets/boom.png)
+
 Typescript examples resolving LeetCode or HackerRank exercises
+
 - Algorithms
   - [Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
     - [Linked list values](./src/algorithms/linkedList/linkedListValues.md).
@@ -40,7 +41,7 @@ Typescript examples resolving LeetCode or HackerRank exercises
       - [Staircase](./src/hackerRank/algorithms/easy/staircase.md)
       - [Birthday Cake Candles](./src/hackerRank/algorithms/easy/birthdayCakeCandles.md)
 - Real code interviews
-  - [Count dupes](./src/realCodeInterviews/countDupes.md)
+  - [Count dupes](./src/real-code-interviews/count-dupes.md)
 
 ## Install your environment
 
@@ -62,9 +63,9 @@ npm tests
 
 You could add a new exercise with him test only follow the same pattern:
 
-```
-myNewExerciseFile.ts        // Exercise source code
-myNewExerciseFile.test.ts   // Exercise test code
+```text
+my-new-exercise-file.ts        // Exercise source code
+my-new-exercise-file.test.ts   // Exercise test code
 ```
 
 In order to write your source code while test are running you could run:

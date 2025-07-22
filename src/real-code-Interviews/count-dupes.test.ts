@@ -1,4 +1,4 @@
-import { countDupes } from './countDupes';
+import { countDupes } from './count-dupes';
 
 describe('countDupes', () => {
   it('should return 2', () => {
