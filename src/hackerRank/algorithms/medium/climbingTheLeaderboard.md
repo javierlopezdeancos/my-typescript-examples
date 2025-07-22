@@ -23,7 +23,7 @@ climbingLeaderboard has the following parameter(s):
 
 - int[m]: the player's rank after each new score
 
-I**nput Format**
+**Input Format**
 
 The first line contains an integer **_n_**, the number of players on the leaderboard.
 
