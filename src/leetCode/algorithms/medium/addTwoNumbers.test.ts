@@ -1,4 +1,4 @@
-import { addTwoNumbers, createListNode } from './addTwoNumbers';
+import { addTwoNumbers, createLinkedListNode } from './addTwoNumbers';
 
 describe('addTwoNumbers', (): void => {
   test('should sum nodes with same levels', function () {
@@ -37,9 +37,9 @@ describe('addTwoNumbers', (): void => {
     };
     */
 
-    const eightNode = createListNode(8);
-    const zeroNode = createListNode(0, eightNode);
-    const sevenNode = createListNode(7, zeroNode);
+    const eightNode = createLinkedListNode(8);
+    const zeroNode = createLinkedListNode(0, eightNode);
+    const sevenNode = createLinkedListNode(7, zeroNode);
 
     //   2 -> 4 -> 3
     //   5 -> 6 -> 4  +
@@ -72,9 +72,9 @@ describe('addTwoNumbers', (): void => {
       },
     };
 
-    const twoLastNode = createListNode(2);
-    const twoNode = createListNode(2, twoLastNode);
-    const zeroNode = createListNode(0, twoNode);
+    const twoLastNode = createLinkedListNode(2);
+    const twoNode = createLinkedListNode(2, twoLastNode);
+    const zeroNode = createLinkedListNode(0, twoNode);
 
     //   0 -> 1
     //   0 -> 1 -> 2  +
@@ -98,8 +98,8 @@ describe('addTwoNumbers', (): void => {
       },
     };
 
-    const oneNode = createListNode(1);
-    const zeroNode = createListNode(0, oneNode);
+    const oneNode = createLinkedListNode(1);
+    const zeroNode = createLinkedListNode(0, oneNode);
 
     //
     //   0 -> 1  +
@@ -126,9 +126,9 @@ describe('addTwoNumbers', (): void => {
       next: null,
     };
 
-    const oneNode = createListNode(1);
-    const zeroNode = createListNode(0, oneNode);
-    const zeroFirstNode = createListNode(0, zeroNode);
+    const oneNode = createLinkedListNode(1);
+    const zeroNode = createLinkedListNode(0, oneNode);
+    const zeroFirstNode = createLinkedListNode(0, zeroNode);
 
     //   9 -> 9
     //   1      +

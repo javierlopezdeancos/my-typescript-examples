@@ -1,6 +1,4 @@
-# Climbing the LeaderB
-
-oard
+# Climbing the LeaderBoard
 
 An arcade game player wants to climb to the top of the leaderboard and track their ranking. The game uses [Dense Ranking](https://en.wikipedia.org/wiki/Ranking#Dense_ranking_.28.221223.22_ranking.29), so its leaderboard works like this:
 

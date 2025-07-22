@@ -19,14 +19,14 @@
  * }
  */
 
-export type ValueType = number;
+export type LinkedListNodeValue = number;
 
-export type ListNodeType = {
-  val: ValueType;
-  next: ListNodeType | null;
+export type LinkedListNode = {
+  val: LinkedListNodeValue;
+  next: LinkedListNode | null;
 };
 
-export function createListNode(val?: ValueType, next?: ListNodeType): ListNodeType {
+export function createLinkedListNode(val?: LinkedListNodeValue, next?: LinkedListNode): LinkedListNode {
   return {
     val: val || 0,
     next: next || null,
@@ -37,30 +37,33 @@ export function createListNode(val?: ValueType, next?: ListNodeType): ListNodeTy
 //        5   6   4
 //        7   0   8
 
-export function addTwoNumbers(a: ListNodeType | null, b: ListNodeType | null): ListNodeType | null {
+export function addTwoNumbers(
+  linkedListNodeA: LinkedListNode | null,
+  linkedListNodeB: LinkedListNode | null
+): LinkedListNode | null {
   let sum = 0;
-  let current = createListNode(0);
+  let current = createLinkedListNode(0);
   let result = current;
 
-  while (a || b) {
-    if (a) {
-      sum += a.val;
-      a = a.next;
+  while (linkedListNodeA || linkedListNodeB) {
+    if (linkedListNodeA) {
+      sum += linkedListNodeA.val;
+      linkedListNodeA = linkedListNodeA.next;
     }
 
-    if (b) {
-      sum += b.val;
-      b = b.next;
+    if (linkedListNodeB) {
+      sum += linkedListNodeB.val;
+      linkedListNodeB = linkedListNodeB.next;
     }
 
-    current.next = createListNode(sum % 10);
+    current.next = createLinkedListNode(sum % 10);
     current = current.next;
 
     sum = sum > 9 ? 1 : 0;
   }
 
   if (sum) {
-    current.next = createListNode(sum);
+    current.next = createLinkedListNode(sum);
   }
 
   return result.next;

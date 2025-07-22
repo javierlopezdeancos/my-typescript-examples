@@ -22,9 +22,10 @@ export function getPegs(guess: string[], secret: string[]): string[] {
 
   for (let i = 0; i < guess.length; i++) {
     const g = guess[i];
+    const s = secret[i];
 
-    const isCorrectColorAndLocation = guess[i] === secret[i];
-    const isCorrectColor = secret.includes(guess[i]);
+    const isCorrectColorAndLocation = g === s;
+    const isCorrectColor = secret.includes(g);
 
     if (isCorrectColorAndLocation) {
       pegs.push('X');
