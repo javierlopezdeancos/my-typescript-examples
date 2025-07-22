@@ -1,16 +1,15 @@
 // a = [3, 2 ,1, 2, 3]
 
 export function minimumDistances(numbers: number[]): number {
-  const l = numbers.length;
   let min = Number.MAX_SAFE_INTEGER;
 
-  if (l <= 1) {
+  if (numbers.length <= 1) {
     return -1;
   }
 
   const pairs = new Set<number>();
 
-  for (let i = 0; i < l; i++) {
+  for (let i = 0; i < numbers.length; i++) {
     const n = numbers[i];
 
     const repeated = numbers.filter((x: number) => x === n).length;
